@@ -11,6 +11,14 @@ Composer Library Skeleton
 
 The template for PHP composer library.
 
+Features
+--------
+- [PHP Coding Standards Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer), including [PhpStorm](https://www.jetbrains.com/phpstorm/) integration
+- [Travis CI](https://travis-ci.org/)
+- [PHPUnit](https://phpunit.de/) (try `composer test`)
+- Used packages security check by [Roave Security Advisories](https://packagist.org/packages/roave/security-advisories)
+    (try `composer check:security`)
+    
 Installation
 ------------
 `composer require webarchitect609/composer-library-skeleton`
