@@ -13,7 +13,9 @@ The template for PHP composer library.
 
 Features
 --------
-- [PHP Coding Standards Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer), including [PhpStorm](https://www.jetbrains.com/phpstorm/) integration
+- [PHP Coding Standards Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) (try `composer
+    check:code-style`), including [PhpStorm](https://www.jetbrains.com/phpstorm/) and
+    [Travis CI](https://travis-ci.org/) integrations
 - [Travis CI](https://travis-ci.org/)
 - [PHPUnit](https://phpunit.de/) (try `composer test`)
 - Used packages security check by [Roave Security Advisories](https://packagist.org/packages/roave/security-advisories)

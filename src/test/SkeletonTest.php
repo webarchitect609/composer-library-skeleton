@@ -2,9 +2,9 @@
 
 namespace WebArch\Skeleton\Test;
 
+use function PHPUnit\Framework\assertEquals;
 use PHPUnit\Framework\TestCase;
 use WebArch\Skeleton\Skeleton;
-use function PHPUnit\Framework\assertEquals;
 
 class SkeletonTest extends TestCase
 {
