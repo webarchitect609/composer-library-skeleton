@@ -1,11 +1,7 @@
 ---
 os: linux
 dist: bionic
-
 language: php
-php:
-  - 7.3
-  - 7.4
 
 git:
   depth: 3
@@ -14,6 +10,7 @@ git:
 jobs:
   include:
     - stage: "Code style check"
+      php: 7.3
       before_script:
         - (composer self-update; true)
         - composer install --no-progress --no-suggest --no-interaction --no-cache
@@ -22,6 +19,14 @@ jobs:
         - export CHANGED_PHP_FILES=$(git diff --name-only --diff-filter=ACMRTUXB $COMMIT_RANGE | grep -E "\.php$")
       script:
         - ./bin/php-cs-check.sh
-    - stage: "Unit tests"
+    - &STANDARD_UNIT_TEST_JOB
+      stage: "Unit tests"
+      php: 7.3
+      before_script:
+        - (composer self-update; true)
+        - composer install --no-progress --no-suggest --no-interaction --no-cache
       script:
         - composer test
+    -
+      <<: *STANDARD_UNIT_TEST_JOB
+      php: 7.4
