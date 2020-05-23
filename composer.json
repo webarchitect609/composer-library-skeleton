@@ -29,11 +29,13 @@
     }
   },
   "scripts": {
+    "check:codestyle": "./vendor/bin/php-cs-fixer fix --ansi --dry-run --diff",
     "check:security": "@composer update --dry-run roave/security-advisories",
     "test": "vendor/bin/phpunit"
   },
   "scripts-descriptions": {
-    "check:security": "Manual security check via roave/security-advisories",
+    "check:codestyle": "Check code style of all php files.",
+    "check:security": "Manual security check via roave/security-advisories.",
     "test": "Run all UnitTests."
   },
   "config": {

@@ -11,9 +11,17 @@ git:
   depth: 3
   quiet: true
 
-before_script:
-  - (composer self-update; true)
-  - composer install --no-progress --no-suggest --no-interaction --no-cache
-
-script:
-  - composer test
+jobs:
+  include:
+    - stage: "Code style check"
+      before_script:
+        - (composer self-update; true)
+        - composer install --no-progress --no-suggest --no-interaction --no-cache
+        # Checks all the changed files in the pull request, but only the last commit when pushing the branch.
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then COMMIT_RANGE=$TRAVIS_COMMIT_RANGE; else COMMIT_RANGE="HEAD~..HEAD"; fi;
+        - export CHANGED_PHP_FILES=$(git diff --name-only --diff-filter=ACMRTUXB $COMMIT_RANGE | grep -E "\.php$")
+      script:
+        - ./bin/php-cs-check.sh
+    - stage: "Unit tests"
+      script:
+        - composer test

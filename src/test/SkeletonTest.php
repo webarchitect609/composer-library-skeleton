@@ -13,8 +13,7 @@ class SkeletonTest extends TestCase
      */
     private $skeleton;
 
-    protected function setUp(): void
-    {
+    protected function setUp(): void {
         $this->skeleton = new Skeleton();
     }
 
