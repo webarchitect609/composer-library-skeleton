@@ -4,7 +4,7 @@ dist: bionic
 language: php
 
 git:
-  depth: 3
+  depth: 10
   quiet: true
 
 jobs:
@@ -14,11 +14,9 @@ jobs:
       before_script:
         - (composer self-update; true)
         - composer install --no-progress --no-suggest --no-interaction --no-cache
-        # Checks all the changed files in the pull request, but only the last commit when pushing the branch.
-        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then COMMIT_RANGE=$TRAVIS_COMMIT_RANGE; else COMMIT_RANGE="HEAD~..HEAD"; fi;
-        - export CHANGED_PHP_FILES=$(git diff --name-only --diff-filter=ACMRTUXB $COMMIT_RANGE | grep -E "\.php$")
       script:
-        - ./bin/php-cs-check.sh
+        - export TRAVIS_PULL_REQUEST TRAVIS_COMMIT_RANGE
+        - ./dev-tools/php-cs-check.sh
     - &STANDARD_UNIT_TEST_JOB
       stage: "Unit tests"
       php: 7.3

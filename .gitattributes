@@ -3,5 +3,6 @@
 /.gitignore export-ignore
 /.php_cs.dist export-ignore
 /.travis.yml export-ignore
+/dev-tools export-ignore
 /phpunit.xml.dist export-ignore
 /src/test export-ignore
