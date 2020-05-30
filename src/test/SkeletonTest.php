@@ -18,6 +18,9 @@ class SkeletonTest extends TestCase
         $this->skeleton = new Skeleton();
     }
 
+    /**
+     * @return void
+     */
     public function testHello()
     {
         assertEquals('Hello, World!', $this->skeleton->hello());

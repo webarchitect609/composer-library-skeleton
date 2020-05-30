@@ -21,3 +21,6 @@ Changelog
 
 ### Security:
 - In case of vulnerabilities
+
+### BREAKING CHANGES
+- Changed features which require client code update.

@@ -10,19 +10,21 @@ git:
 jobs:
   include:
     - &STANDARD_TEST_JOB
-      stage: "Code style check"
+      stage: "Code style & static code analysis"
       php: 7.3
-      before_script:
+      install:
         - (composer self-update; true)
         - composer install --no-progress --no-suggest --no-interaction --no-cache
       script:
         - export TRAVIS_PULL_REQUEST TRAVIS_COMMIT_RANGE
         - ./dev-tools/php-cs-check.sh
+        - composer check:analyse
     - &STANDART_UNIT_TEST_JOB
       <<: *STANDARD_TEST_JOB
       stage: "Unit tests"
       php: 7.3
       script:
-        - composer test
-    - <<: *STANDART_UNIT_TEST_JOB
+        - composer check:test
+    -
+      <<: *STANDART_UNIT_TEST_JOB
       php: 7.4

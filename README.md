@@ -7,20 +7,19 @@ Composer Library Skeleton
 [![License](https://img.shields.io/github/license/webarchitect609/composer-library-skeleton)](LICENSE.md)
 [![More stuff from me](https://img.shields.io/badge/packagist-webarchitect609-blueviolet)](https://packagist.org/packages/webarchitect609/)
 
-**Please, be careful:** this is non-stable alpha version so far!
+**Please, be careful:** disclaimer text example goes here!
 
-The template for PHP composer library.
+This is a template for PHP composer library. So the information here and in other *.md files is just a stub.
 
 Features
 --------
-- [PHP Coding Standards Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) (try `composer
-    check:code-style`), including [PhpStorm](https://www.jetbrains.com/phpstorm/) and
-    [Travis CI](https://travis-ci.org/) integrations
-- [Travis CI](https://travis-ci.org/)
-- [PHPUnit](https://phpunit.de/) (try `composer test`)
-- Used packages security check by [Roave Security Advisories](https://packagist.org/packages/roave/security-advisories)
-    (try `composer check:security`)
-    
+- Code style check via [PHP Coding Standards Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer),
+    including [PhpStorm](https://www.jetbrains.com/phpstorm/) integration
+- Unit-tests via [PHPUnit](https://phpunit.de/)
+- Static code analysis via [PHPStan](https://phpstan.org)
+- Dependencies security check via [Roave Security Advisories](https://packagist.org/packages/roave/security-advisories)
+- And [Travis CI](https://travis-ci.org/) for continuous delivery
+
 Installation
 ------------
 `composer require webarchitect609/composer-library-skeleton`
