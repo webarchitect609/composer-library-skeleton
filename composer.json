@@ -39,7 +39,7 @@
     "check:analyse": "vendor/bin/phpstan analyse --ansi --no-progress",
     "check:code-style": "vendor/bin/php-cs-fixer fix --ansi --dry-run --diff",
     "check:security": "@composer update --no-suggest --no-interaction --dry-run roave/security-advisories",
-    "check:test": "vendor/bin/phpunit"
+    "check:test": "vendor/bin/phpunit --colors=always"
   },
   "scripts-descriptions": {
     "check:all": "Perform all the checks at once: code-style, static code analysis, unit tests and security.",
