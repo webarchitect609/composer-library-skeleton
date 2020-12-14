@@ -24,6 +24,12 @@ Installation
 ------------
 `composer require webarchitect609/composer-library-skeleton`
 
+Support
+-------
+You can use this skeleton totally for free, or you can appreciate the author for his work and support desire to make new
+useful projects:
+- [ЮMoney](https://sobe.ru/na/composer_library_skeleton)
+
 Usage
 -----
 1. [Use this template](https://github.com/webarchitect609/composer-library-skeleton/generate) directly on GitHub or
