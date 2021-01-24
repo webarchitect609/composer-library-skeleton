@@ -20,7 +20,7 @@ jobs:
   fast_finish: true
   include:
     - &STANDARD_TEST_JOB
-      stage: "Code style, lint and unit"
+      stage: "Code style, lint, unit and mutation"
       php: 7.3
       install:
         - (composer self-update; true)
