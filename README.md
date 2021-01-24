@@ -2,6 +2,7 @@ Composer Library Skeleton
 =========================
 [![Travis Build Status](https://travis-ci.com/webarchitect609/composer-library-skeleton.svg?branch=master)](https://travis-ci.com/webarchitect609/composer-library-skeleton)
 [![codecov](https://codecov.io/gh/webarchitect609/composer-library-skeleton/branch/master/graph/badge.svg?token=N8K5K8V88E)](https://codecov.io/gh/webarchitect609/composer-library-skeleton)
+[![Mutation score](https://badge.stryker-mutator.io/github.com/webarchitect609/composer-library-skeleton/master)](https://dashboard.stryker-mutator.io/reports/github.com/webarchitect609/composer-library-skeleton/master)
 [![PHP version](https://img.shields.io/packagist/php-v/webarchitect609/composer-library-skeleton)](https://www.php.net/supported-versions.php)
 [![Latest version](https://img.shields.io/github/v/tag/webarchitect609/composer-library-skeleton?sort=semver)](https://github.com/webarchitect609/composer-library-skeleton/releases)
 [![Downloads](https://img.shields.io/packagist/dt/webarchitect609/composer-library-skeleton)](https://packagist.org/packages/webarchitect609/composer-library-skeleton)
