@@ -18,8 +18,12 @@
     <report>
       <html outputDirectory="build/coverage"/>
       <clover outputFile="build/coverage.xml"/>
+      <xml outputDirectory="build/coverage-xml"/>
     </report>
   </coverage>
+  <logging>
+    <junit outputFile="build/coverage-xml/junit.xml"/>
+  </logging>
   <testsuites>
     <testsuite name="All Test Suites">
       <directory>src/test</directory>

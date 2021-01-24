@@ -30,6 +30,7 @@ jobs:
         - ./dev-tools/php-cs-check.sh
         - composer check:analyse
         - composer check:test
+        - composer check:infection --skip-initial-tests --coverage=build/coverage-xml
       after_success:
         - bash <(curl -s https://codecov.io/bash) -s ./build/
 

@@ -15,6 +15,7 @@
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.16",
+    "infection/infection": "~0.16",
     "phpstan/phpstan": "^0.12",
     "phpunit/phpunit": "^9.4",
     "roave/security-advisories": "dev-master"
@@ -34,10 +35,12 @@
       "@check:code-style",
       "@check:analyse",
       "@check:test",
+      "@check:infection --skip-initial-tests --coverage=build/coverage-xml",
       "@check:security"
     ],
     "check:analyse": "vendor/bin/phpstan analyse --ansi --no-progress",
     "check:code-style": "vendor/bin/php-cs-fixer fix --ansi --dry-run --diff --diff-format udiff",
+    "check:infection": "vendor/bin/infection --threads=4 --min-msi=100 --min-covered-msi=100 --no-progress --no-interaction --ansi",
     "check:security": "@composer update --no-suggest --no-interaction --dry-run roave/security-advisories",
     "check:test": "vendor/bin/phpunit --colors=always"
   },
@@ -45,6 +48,7 @@
     "check:all": "Perform all the checks at once: code-style, static code analysis, unit tests and security.",
     "check:analyse": "Static code analysis via PHPStan",
     "check:code-style": "Check the code style.",
+    "check:infection": "Mutation testing",
     "check:security": "Manual dependencies security check via roave/security-advisories.",
     "check:test": "Run all unit tests."
   },
